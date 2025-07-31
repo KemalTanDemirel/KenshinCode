@@ -57,15 +57,6 @@ Girdi: 23 15 31 31 34
 
 ---
 
-## 💡 Geliştirme Fikirleri
-
-- Anahtar kelimeye göre tabloyu dinamik oluşturma
-- İkinci şifre katmanı (örneğin ters çevirme, sabit ekleme)
-- QR kod ile şifrelenmiş mesaj paylaşımı
-- Yapay zeka ile saldırıya karşı dayanıklılık testi
-
----
-
 ## 👤 Yazar
 
 **Kemal Tan Demirel**  
