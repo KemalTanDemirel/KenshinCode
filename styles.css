@@ -481,6 +481,40 @@ button:disabled {
     background: linear-gradient(135deg, var(--warning-color), #e67e22);
 }
 
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 0;
+    border-top: 1px solid #e9ecef;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 249, 250, 0.9));
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.footer p {
+    margin: 0;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer a:hover {
+    color: var(--secondary-color);
+    transform: translateY(-1px);
+}
+
+.footer i {
+    font-size: 16px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
