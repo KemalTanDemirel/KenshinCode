@@ -346,14 +346,6 @@ class PolybiusCipher {
             });
         }, 100);
 
-        // Sayfa kapatılırken uyarı (eğer metin varsa)
-        window.addEventListener('beforeunload', (e) => {
-            const input = document.getElementById('inputText').value;
-            if (input.trim()) {
-                e.preventDefault();
-                e.returnValue = 'Girilen metin kaybolacak. Emin misiniz?';
-            }
-        });
     }
 }
 
