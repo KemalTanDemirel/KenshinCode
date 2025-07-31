@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KenshinCode - Polybius Karesi Şifreleme</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>KenshinCode</h1>
+        <p class="subtitle">Polybius Karesi ile Türkçe Şifreleme</p>
+
+        <div class="stats-panel">
+            <div class="stat-card">
+                <div class="stat-number" id="charCount">0</div>
+                <div class="stat-label">Karakter</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="wordCount">0</div>
+                <div class="stat-label">Kelime</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="encryptedCount">0</div>
+                <div class="stat-label">Şifrelenmiş</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="operationTime">0ms</div>
+                <div class="stat-label">İşlem Süresi</div>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <button class="toggle-instructions" onclick="toggleInstructions()">
+                <i class="fas fa-chevron-down" id="instructionIcon"></i> Kullanım Kılavuzu
+            </button>
+            <div class="instructions-content" id="instructionsContent">
+                <h3>Nasıl Kullanılır?</h3>
+                <ul>
+                    <li><strong>Şifreleme:</strong> Metninizi yazın ve "Şifrele" butonuna tıklayın</li>
+                    <li><strong>Deşifreleme:</strong> Şifreli sayıları (boşluk veya tire ile ayrılmış) yazın ve "Çöz" butonuna tıklayın</li>
+                    <li>Her karakter, aşağıdaki 7x7 tablodaki konumuna göre iki haneli sayı ile temsil edilir</li>
+                    <li><strong>Kısayollar:</strong> Ctrl+Enter ile şifreleme, Ctrl+Shift+Enter ile deşifreleme</li>
+                    <li><strong>Kopyalama:</strong> Sonuç alanının üzerine geldiğinizde kopyala butonu görünür</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="polybius-grid" id="polybiusGrid"></div>
+
+        <div class="input-section">
+            <label for="inputText">Metin Girişi:</label>
+            <div class="input-wrapper">
+                <textarea id="inputText" placeholder="Şifrelenecek metni veya çözülecek sayıları buraya yazın..."></textarea>
+                <div class="typing-indicator" id="typingIndicator"></div>
+                <div class="char-counter" id="charCounter">0 karakter</div>
+            </div>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <div class="button-group">
+            <button class="encrypt-btn" onclick="encryptText()" id="encryptBtn">
+                <i class="fas fa-lock"></i> Şifrele
+            </button>
+            <button class="decrypt-btn" onclick="decryptText()" id="decryptBtn">
+                <i class="fas fa-unlock"></i> Çöz
+            </button>
+            <button class="clear-btn" onclick="clearAll()">
+                <i class="fas fa-trash"></i> Temizle
+            </button>
+        </div>
+
+        <div class="output-section">
+            <label for="output">Sonuç:</label>
+            <div class="output" id="output">
+                Sonuç burada görünecek...
+                <button class="copy-btn" onclick="copyToClipboard()" id="copyBtn">
+                    <i class="fas fa-copy"></i> Kopyala
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Container -->
+    <div class="notification" id="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
