@@ -68,7 +68,7 @@ Girdi: 23 15 31 31 34
 
 ## 👤 Yazar
 
-**[Adını buraya yaz]**  
+**Kemal Tan Demirel**  
 Bu proje bir eğitim & kriptografi merakı kapsamında geliştirilmiştir.
 
 ---
