@@ -16,7 +16,6 @@ class PolybiusCipher {
         this.charToCoord = {};
         this.coordToChar = {};
         this.operationHistory = [];
-        this.instructionsVisible = true;
 
         this.init();
     }
@@ -267,20 +266,6 @@ class PolybiusCipher {
         });
     }
 
-    toggleInstructions() {
-        const content = document.getElementById('instructionsContent');
-        const icon = document.getElementById('instructionIcon');
-        
-        this.instructionsVisible = !this.instructionsVisible;
-        
-        if (this.instructionsVisible) {
-            content.classList.remove('collapsed');
-            icon.className = 'fas fa-chevron-down';
-        } else {
-            content.classList.add('collapsed');
-            icon.className = 'fas fa-chevron-right';
-        }
-    }
 
     clearAll() {
         const input = document.getElementById('inputText');
@@ -370,9 +355,6 @@ function copyToClipboard() {
     cipher.copyToClipboard();
 }
 
-function toggleInstructions() {
-    cipher.toggleInstructions();
-}
 
 function clearAll() {
     cipher.clearAll();
