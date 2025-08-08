@@ -105,56 +105,7 @@ h1::after {
     letter-spacing: 1px;
 }
 
-/* Instructions */
-.instructions {
-    background: linear-gradient(135deg, #e8f4fd, #f0f8ff);
-    border-left: 4px solid var(--primary-color);
-    padding: 20px;
-    margin: 30px 0;
-    border-radius: 0 var(--border-radius) var(--border-radius) 0;
-    position: relative;
-}
 
-.toggle-instructions {
-    background: none;
-    border: none;
-    color: var(--primary-color);
-    cursor: pointer;
-    font-size: 14px;
-    padding: 5px;
-    margin-bottom: 10px;
-    transition: var(--transition);
-    min-width: auto;
-}
-
-.toggle-instructions:hover {
-    color: var(--secondary-color);
-}
-
-.instructions-content {
-    transition: var(--transition);
-    overflow: hidden;
-}
-
-.instructions-content.collapsed {
-    max-height: 0;
-    opacity: 0;
-    padding: 0;
-}
-
-.instructions h3 {
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.instructions ul {
-    margin-left: 20px;
-    color: #555;
-}
-
-.instructions li {
-    margin-bottom: 5px;
-}
 
 /* Polybius Grid */
 .polybius-grid {
